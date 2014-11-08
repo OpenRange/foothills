@@ -1,0 +1,116 @@
+/*
+Theme Name: Foothills
+Theme URI: http://ran.ge/foothills
+Author: Range
+Author URI: http://ran.ge
+Description: Start at the Foothills and explore the range;
+Version: 0.8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Foothills
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ Foothills is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+
+Grunt setup based on Devin Price's Platform.
+
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+0.0 Reset
+1.0 Typography
+2.0 Elements
+3.0 Forms
+4.0 Scaffolding
+	4.1 Header
+	4.2 Footer
+	4.3 Comments
+5.0 Navigation
+	5.1 Links
+	5.2 Menus
+6.0 Accessibility
+7.0 Utilities
+8.0 Widgets
+9.0 Views
+	9.1 Posts
+	9.2 Pages
+	9.3 Template____ (more as needed)
+10.0 Media
+	11.1 Captions
+	11.2 Galleries
+11.0 Effects
+	11.1 Infinite Scroll
+	11.2 Animation
+--------------------------------------------------------------*/
+@import "variables-site";
+@import "mixins-master";
+
+/*--------------------------------------------------------------
+0.0 Reset
+--------------------------------------------------------------*/
+@import "reset";
+
+/*--------------------------------------------------------------
+1.0 Typography
+--------------------------------------------------------------*/
+@import "typography";
+
+/*--------------------------------------------------------------
+2.0 Elements
+--------------------------------------------------------------*/
+@import "elements";
+
+/*--------------------------------------------------------------
+3.0 Forms
+--------------------------------------------------------------*/
+@import "forms";
+
+/*--------------------------------------------------------------
+4.0 Scaffolding
+--------------------------------------------------------------*/
+@import "scaffolding";
+
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+@import "navigation";
+
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+@import "accessibility";
+
+/*--------------------------------------------------------------
+7.0 Utilities
+--------------------------------------------------------------*/
+@import "utilities";
+
+/*--------------------------------------------------------------
+8.0 Widgets
+--------------------------------------------------------------*/
+@import "widgets";
+
+/*--------------------------------------------------------------
+9.0 Views
+--------------------------------------------------------------*/
+@import "views";
+
+/*--------------------------------------------------------------
+10.0 Media
+--------------------------------------------------------------*/
+@import "media";
+
+/*--------------------------------------------------------------
+11.0 Effects
+--------------------------------------------------------------*/
+@import "effects";
