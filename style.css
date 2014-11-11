@@ -669,7 +669,7 @@ a:hover, a:focus, a:active {
 .content-area {
   float: left;
   margin: 0 -25% 0 0;
-  width: 100%;
+  width: 75%;
 }
 
 .site-main {
