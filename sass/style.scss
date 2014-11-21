@@ -4,7 +4,7 @@ Theme URI: http://ran.ge/foothills
 Author: Range
 Author URI: http://ran.ge
 Description: Start at the Foothills and explore the range;
-Version: 0.8.0
+Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: Foothills
@@ -25,92 +25,103 @@ Grunt setup based on Devin Price's Platform.
 */
 
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
+TABLE OF CONTENTS:
 ----------------------------------------------------------------
-0.0 Reset
-1.0 Typography
-2.0 Elements
-3.0 Forms
-4.0 Scaffolding
-	4.1 Header
-	4.2 Footer
-	4.3 Comments
-5.0 Navigation
-	5.1 Links
-	5.2 Menus
-6.0 Accessibility
-7.0 Utilities
-8.0 Widgets
-9.0 Views
-	9.1 Posts
-	9.2 Pages
-	9.3 Template____ (more as needed)
-10.0 Media
-	11.1 Captions
-	11.2 Galleries
-11.0 Effects
-	11.1 Infinite Scroll
-	11.2 Animation
+Reset
+Typography
+Elements
+Forms
+Grid
+Scaffolding
+  > Header
+  > Footer
+Navigation
+  > Links
+  > Menus
+Accessibility
+Utilities
+Widgets
+Comments
+Views
+	> Posts
+	> Pages
+	> Template____ (more as needed)
+Media
+	> Captions
+	> Galleries
+Effects
+	> Infinite Scroll
+	> Animation
 --------------------------------------------------------------*/
 @import "variables-site";
 @import "mixins-master";
 
 /*--------------------------------------------------------------
-0.0 Reset
+ Reset
 --------------------------------------------------------------*/
 @import "reset";
 
 /*--------------------------------------------------------------
-1.0 Typography
+ Typography
 --------------------------------------------------------------*/
 @import "typography";
 
 /*--------------------------------------------------------------
-2.0 Elements
+ Elements
 --------------------------------------------------------------*/
 @import "elements";
 
 /*--------------------------------------------------------------
-3.0 Forms
+ Forms
 --------------------------------------------------------------*/
 @import "forms";
 
 /*--------------------------------------------------------------
-4.0 Scaffolding
+ Grid
+--------------------------------------------------------------*/
+@import "grid";
+
+/*--------------------------------------------------------------
+ Scaffolding
 --------------------------------------------------------------*/
 @import "scaffolding";
 
 /*--------------------------------------------------------------
-5.0 Navigation
+ Navigation
 --------------------------------------------------------------*/
 @import "navigation";
 
 /*--------------------------------------------------------------
-6.0 Accessibility
+ Accessibility
 --------------------------------------------------------------*/
 @import "accessibility";
 
 /*--------------------------------------------------------------
-7.0 Utilities
+ Utilities
 --------------------------------------------------------------*/
 @import "utilities";
 
 /*--------------------------------------------------------------
-8.0 Widgets
+ Widgets
 --------------------------------------------------------------*/
 @import "widgets";
 
 /*--------------------------------------------------------------
-9.0 Views
+ Comments
+--------------------------------------------------------------*/
+@import "comments";
+
+/*--------------------------------------------------------------
+ Views
 --------------------------------------------------------------*/
 @import "views";
 
 /*--------------------------------------------------------------
-10.0 Media
+ Media
 --------------------------------------------------------------*/
 @import "media";
 
 /*--------------------------------------------------------------
-11.0 Effects
+ Effects
 --------------------------------------------------------------*/
 @import "effects";

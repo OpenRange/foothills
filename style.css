@@ -4,7 +4,7 @@ Theme URI: http://ran.ge/foothills
 Author: Range
 Author URI: http://ran.ge
 Description: Start at the Foothills and explore the range;
-Version: 0.8.0
+Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: Foothills
@@ -24,35 +24,36 @@ Grunt setup based on Devin Price's Platform.
 
 */
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
+TABLE OF CONTENTS:
 ----------------------------------------------------------------
-0.0 Reset
-1.0 Typography
-2.0 Elements
-3.0 Forms
-4.0 Scaffolding
-	4.1 Header
-	4.2 Footer
-	4.3 Comments
-5.0 Navigation
-	5.1 Links
-	5.2 Menus
-6.0 Accessibility
-7.0 Utilities
-8.0 Widgets
-9.0 Views
-	9.1 Posts
-	9.2 Pages
-	9.3 Template____ (more as needed)
-10.0 Media
-	11.1 Captions
-	11.2 Galleries
-11.0 Effects
-	11.1 Infinite Scroll
-	11.2 Animation
+Reset
+Typography
+Elements
+Forms
+Grid
+Scaffolding
+  > Header
+  > Footer
+Navigation
+  > Links
+  > Menus
+Accessibility
+Utilities
+Widgets
+Comments
+Views
+	> Posts
+	> Pages
+	> Template____ (more as needed)
+Media
+	> Captions
+	> Galleries
+Effects
+	> Infinite Scroll
+	> Animation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-0.0 Reset
+ Reset
 --------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -94,7 +95,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: white;
   /* Fallback for when there is no custom background color defined. */
 }
 
@@ -149,7 +150,7 @@ a img {
 }
 
 /*--------------------------------------------------------------
-1.0 Typography
+ Typography
 --------------------------------------------------------------*/
 body,
 button,
@@ -190,7 +191,7 @@ address {
 }
 
 pre {
-  background: #eee;
+  background: #eeeeee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 1.5rem;
@@ -208,7 +209,7 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #666666;
   cursor: help;
 }
 
@@ -243,10 +244,10 @@ big {
 }
 
 /*--------------------------------------------------------------
-2.0 Elements
+ Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #ccc;
+  background-color: #cccccc;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
@@ -301,7 +302,7 @@ th {
 }
 
 /*--------------------------------------------------------------
-3.0 Forms
+ Forms
 --------------------------------------------------------------*/
 button,
 input,
@@ -320,7 +321,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  border-color: #cccccc #cccccc #bbbbbb;
   border-radius: 3px;
   background: #e6e6e6;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
@@ -340,7 +341,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa;
+  border-color: #cccccc #bbbbbb #aaaaaa;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 
@@ -352,7 +353,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  border-color: #aaa #bbb #bbb;
+  border-color: #aaaaaa #bbbbbb #bbbbbb;
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -386,8 +387,8 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  color: #666666;
+  border: 1px solid #cccccc;
   border-radius: 3px;
 }
 
@@ -397,7 +398,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-  color: #111;
+  color: #111111;
 }
 
 input[type="text"],
@@ -418,30 +419,22 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-4.0 Scaffolding
+ Grid
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-4.1 Header
+ Scaffolding
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-4.2 Footer
+> Header
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-4.3 Comments 
---------------------------------------------------------------*/
-.comment-content a {
-  word-wrap: break-word;
-}
-
-.bypostauthor {
-  display: block;
-}
-
-/*--------------------------------------------------------------
-5.0 Navigation
+> Footer
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-5.1 Links
+ Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+> Links
 --------------------------------------------------------------*/
 a {
   color: royalblue;
@@ -454,7 +447,7 @@ a:hover, a:focus, a:active {
 }
 
 /*--------------------------------------------------------------
-5.2 Menus
+> Menus
 --------------------------------------------------------------*/
 .main-navigation {
   clear: both;
@@ -535,7 +528,7 @@ a:hover, a:focus, a:active {
 }
 
 /*--------------------------------------------------------------
-6.0 Accessibility
+ Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -567,7 +560,7 @@ a:hover, a:focus, a:active {
 }
 
 /*--------------------------------------------------------------
-7.0 Utilities
+ Utilities
 --------------------------------------------------------------*/
 .alignleft {
   display: inline;
@@ -612,7 +605,7 @@ a:hover, a:focus, a:active {
 }
 
 /*--------------------------------------------------------------
-8.0 Widgets
+ Widgets
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
@@ -628,10 +621,24 @@ a:hover, a:focus, a:active {
 }
 
 /*--------------------------------------------------------------
-9.0 Views
+ Comments
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-9.1 Posts
+> Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+ Views
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+> Posts
 --------------------------------------------------------------*/
 .sticky {
   display: block;
@@ -658,7 +665,7 @@ a:hover, a:focus, a:active {
 }
 
 /*--------------------------------------------------------------
-9.2 Page
+> Page
 --------------------------------------------------------------*/
 .page-links {
   clear: both;
@@ -683,7 +690,7 @@ a:hover, a:focus, a:active {
 }
 
 /*--------------------------------------------------------------
-10.0 Media
+ Media
 --------------------------------------------------------------*/
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
@@ -702,7 +709,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-12.1 Captions
+> Captions
 --------------------------------------------------------------*/
 .wp-caption {
   margin-bottom: 1.5em;
@@ -721,7 +728,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-12.2 Galleries
+> Galleries
 --------------------------------------------------------------*/
 .gallery {
   margin-bottom: 1.5em;
@@ -771,10 +778,10 @@ object {
 }
 
 /*--------------------------------------------------------------
-11.0 Effects
+ Effects
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-11.1 Infinite Scroll
+> Infinite Scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .paging-navigation,
@@ -789,5 +796,5 @@ object {
 }
 
 /*--------------------------------------------------------------
-11.2 Animation
+> Animation
 --------------------------------------------------------------*/
