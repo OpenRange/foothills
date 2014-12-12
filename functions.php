@@ -9,7 +9,7 @@
 /**
  * The current version of the theme.
  */
-define( 'FOOTHILLS_VERSION', '0.1.0' );
+define( 'FOOTHILLS_VERSION', '0.2.0' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -44,7 +44,7 @@ function foothills_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -59,19 +59,7 @@ function foothills_setup() {
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
-	) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'foothills_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // foothills_setup
 add_action( 'after_setup_theme', 'foothills_setup' );
@@ -109,11 +97,6 @@ function foothills_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'foothills_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
