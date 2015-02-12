@@ -4,6 +4,13 @@
 A great start on building your next theme. Branched from _s with some sass/css reorganization and Grunt added in.
 
 # Versions
+0.3.0
+Adjust a few things based on recent usage
+- Moved content parts to partials folder
+- Removed shadow on buttons
+- Added header styling to typography (h1, h2, etc) for easier styling
+- Removed content sizes (no more content+sidebar from the start)
+- Added Template folder with blank template for easier creation
 0.2.0
 - Enabled post-thumbnails by default
 - Removed Post Formats
