@@ -95,7 +95,7 @@ html {
 }
 
 body {
-  background: white;
+  background: #fff;
   /* Fallback for when there is no custom background color defined. */
 }
 
@@ -222,7 +222,7 @@ address {
 }
 
 pre {
-  background: #eeeeee;
+  background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 1.5rem;
@@ -240,7 +240,7 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666666;
+  border-bottom: 1px dotted #666;
   cursor: help;
 }
 
@@ -278,7 +278,7 @@ big {
  Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #cccccc;
+  background-color: #ccc;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
@@ -352,7 +352,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #cccccc #cccccc #bbbbbb;
+  border-color: #ccc #ccc #bbb;
   background: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -369,7 +369,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #cccccc #bbbbbb #aaaaaa;
+  border-color: #ccc #bbb #aaa;
 }
 
 button:focus,
@@ -380,7 +380,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  border-color: #aaaaaa #bbbbbb #bbbbbb;
+  border-color: #aaa #bbb #bbb;
 }
 
 input[type="checkbox"],
@@ -413,8 +413,8 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666666;
-  border: 1px solid #cccccc;
+  color: #666;
+  border: 1px solid #ccc;
 }
 
 input[type="text"]:focus,
@@ -423,7 +423,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-  color: #111111;
+  color: #111;
 }
 
 input[type="text"],
@@ -604,29 +604,14 @@ a:hover, a:focus, a:active {
   margin: 0 auto;
 }
 
-.clear:before,
 .clear:after,
-.entry-content:before,
 .entry-content:after,
-.comment-content:before,
 .comment-content:after,
-.site-header:before,
 .site-header:after,
-.site-content:before,
 .site-content:after,
-.site-footer:before,
 .site-footer:after {
   content: "";
   display: table;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-  clear: both;
 }
 
 /*--------------------------------------------------------------
