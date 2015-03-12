@@ -9,7 +9,7 @@
 /**
  * The current version of the theme.
  */
-define( 'FOOTHILLS_VERSION', '0.3.0' );
+define( 'FOOTHILLS_VERSION', '0.4.0' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -86,11 +86,11 @@ add_action( 'widgets_init', 'foothills_widgets_init' );
  * Enqueue scripts and styles.
  */
 function foothills_scripts() {
-	wp_enqueue_style( 'foothills-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'foothills-style', get_stylesheet_uri(), array(), FOOTHILLS_VERSION );
 
-	wp_enqueue_script( 'foothills-scripts', get_template_directory_uri() . '/js/public.js', array(), '20141107', true );
+	wp_enqueue_script( 'foothills-scripts', get_template_directory_uri() . '/js/public.js', array(), FOOTHILLS_VERSION, true );
 
-	//wp_enqueue_script( 'foothills-theme', get_template_directory_uri() . '/js/public.min.js', array(), '20141107', true );
+	//wp_enqueue_script( 'foothills-theme', get_template_directory_uri() . '/js/public.min.js', array(), FOOTHILLS_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

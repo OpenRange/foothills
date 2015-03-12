@@ -4,6 +4,9 @@
 A great start on building your next theme. Branched from _s with some sass/css reorganization and Grunt added in.
 
 # Versions
+0.4.0
+- Switched to 100% base font size
+- Added version constant to enqueue styles and scripts (easier releases)
 0.3.0
 Adjust a few things based on recent usage
 - Moved content parts to partials folder
