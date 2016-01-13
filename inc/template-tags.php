@@ -18,15 +18,15 @@ function foothills_paging_nav() {
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'foothills' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'foothills' ); ?></h1>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'foothills' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( esc_html__( '<span class="meta-nav">&larr;</span> Older posts', 'foothills' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'foothills' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( esc_html__( 'Newer posts <span class="meta-nav">&rarr;</span>', 'foothills' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -49,11 +49,11 @@ function foothills_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'foothills' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'foothills' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'foothills' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'foothills' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', esc_html_x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'foothills' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     esc_html_x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'foothills' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -79,12 +79,12 @@ function foothills_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'foothills' ),
+		esc_html_x( 'Posted on %s', 'post date', 'foothills' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'foothills' ),
+		esc_html_x( 'by %s', 'post author', 'foothills' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -101,25 +101,25 @@ function foothills_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'foothills' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'foothills' ) );
 		if ( $categories_list && foothills_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'foothills' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'foothills' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'foothills' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'foothills' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'foothills' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'foothills' ) . '</span>', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'foothills' ), __( '1 Comment', 'foothills' ), __( '% Comments', 'foothills' ) );
+		comments_popup_link( esc_html__( 'Leave a comment', 'foothills' ), esc_html__( '1 Comment', 'foothills' ), esc_html__( '% Comments', 'foothills' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'foothills' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( esc_html__( 'Edit', 'foothills' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 

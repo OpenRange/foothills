@@ -12,11 +12,16 @@
 define( 'FOOTHILLS_VERSION', '0.5.0' );
 
 /**
- * Set the content width based on the theme's design and stylesheet.
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
  */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+function foothills_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'foothills_content_width', 640 );
 }
+add_action( 'after_setup_theme', 'foothills_content_width', 0 );
 
 if ( ! function_exists( 'foothills_setup' ) ) :
 /**
@@ -40,6 +45,14 @@ function foothills_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
+
+	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
@@ -59,6 +72,12 @@ function foothills_setup() {
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
 
+	// Set up the WordPress core custom background feature.
+	// Commented out by default
+	//	add_theme_support( 'custom-background', apply_filters( 'foothills_custom_background_args', array(
+	//			'default-color' => 'ffffff',
+	//			'default-image' => '',
+	//	) ) );
 
 }
 endif; // foothills_setup
@@ -71,13 +90,13 @@ add_action( 'after_setup_theme', 'foothills_setup' );
  */
 function foothills_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'foothills' ),
+		'name'          => esc_html__( 'Sidebar', 'foothills' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'foothills_widgets_init' );
@@ -97,6 +116,12 @@ function foothills_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'foothills_scripts' );
+
+/**
+ * Implement the Custom Header feature.
+ * Optional: left commented out
+ */
+//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

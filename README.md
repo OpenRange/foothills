@@ -4,6 +4,8 @@
 A great start on building your next theme. Branched from _s with some sass/css reorganization and Grunt added in.
 
 # Versions
+0.5.0
+- Updates based on recent changes to _s, including better XSS protection, support for title_tag, accessibility improvements
 0.4.0
 - Switched to 100% base font size
 - Added version constant to enqueue styles and scripts (easier releases)
