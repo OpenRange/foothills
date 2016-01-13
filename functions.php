@@ -9,7 +9,7 @@
 /**
  * The current version of the theme.
  */
-define( 'FOOTHILLS_VERSION', '0.4.0' );
+define( 'FOOTHILLS_VERSION', '0.5.0' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
