@@ -4,6 +4,10 @@
 A great start on building your next theme. Branched from _s with some sass/css reorganization and Grunt added in.
 
 # Versions
+0.6.0
+- Update from _s
+- Changed how cleafix mixin works
+- Combined js scripts into one public.js (and removed need to run grunt release to concat)
 0.5.0
 - Updates based on recent changes to _s, including better XSS protection, support for title_tag, accessibility improvements
 0.4.0

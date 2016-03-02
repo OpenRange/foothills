@@ -4,11 +4,11 @@ module.exports = function(grunt) {
 	// load all tasks
 	require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
-    grunt.initConfig({
+	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
-			files: ['sass/*.scss'],
-			tasks: 'sass',
+			files: ['sass/*.scss', 'sass/*/*.scss'],
+			tasks: ['sass', 'autoprefixer'],
 			options: {
 				livereload: true,
 			},
@@ -24,22 +24,13 @@ module.exports = function(grunt) {
 			}
 		},
 	    autoprefixer: {
-            options: {
+	        options: {
 				browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1', 'ie 9']
 			},
 			single_file: {
 				src: 'style.css',
 				dest: 'style.css'
 			}
-		},
-		concat: {
-		    build: {
-		        src: [
-		            'js/theme.js',
-		            'js/skip-link-focus-fix.js'		            
-		        ],
-		        dest: 'js/public.js',
-		    }
 		},
 		uglify: {
 		    build: {
@@ -74,13 +65,12 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'default', [
 		'sass',
 		'autoprefixer'
-    ]);
+	]);
 
-    grunt.registerTask( 'release', [
-    	'replace',
-    	'sass',
-    	'autoprefixer',
-    	'concat:build',
+	grunt.registerTask( 'release', [
+		'replace',
+		'sass',
+		'autoprefixer',
 		'uglify:build'
 	]);
 
