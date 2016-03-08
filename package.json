@@ -1,7 +1,7 @@
 {
   "name": "Foothills",
   "version": "0.6.0",
-  "description": "Gruntfile to assist with Foothills theme development",
+  "description": "Foothills theme development",
   "author": "Range",
   "license": "GPL",
   "devDependencies": {
