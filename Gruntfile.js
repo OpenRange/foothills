@@ -8,10 +8,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			files: ['sass/*.scss', 'sass/*/*.scss'],
-			tasks: ['sass', 'autoprefixer'],
-			options: {
-				livereload: true,
-			},
+			tasks: ['sass', 'autoprefixer']
 		},
 		sass: {
 			default: {
