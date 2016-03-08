@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 			  		style : 'expanded'
 			  	},
 			  	files: {
-					'style.css':'sass/style.scss',
+					'style.css':'sass/style.scss'
 				}
 			}
 		},
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 					from: /^define\( 'FOOTHILLS_VERSION'.*$/m,
 					to: 'define( \'FOOTHILLS_VERSION\', \'<%= pkg.version %>\' );'
 				} ]
-			},
+			}
 		}
 	});
 
