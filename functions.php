@@ -52,6 +52,9 @@ function foothills_setup() {
 		'primary' => esc_html__( 'Primary', 'foothills' ),
 	) );
 
+	// This theme uses an editor stylesheet
+	add_editor_style( '/editor-style.css' );
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.

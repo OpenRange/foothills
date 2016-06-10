@@ -12,11 +12,12 @@ module.exports = function(grunt) {
 		},
 		sass: {
 			default: {
-		  		options : {
-			  		style : 'expanded'
-			  	},
-			  	files: {
-					'style.css':'sass/style.scss'
+				options : {
+					style : 'expanded'
+				},
+				files: {
+					'style.css':'sass/style.scss',
+					'editor-style.css':'sass/editor-style.scss'
 				}
 			}
 		},
