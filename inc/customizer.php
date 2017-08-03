@@ -23,3 +23,15 @@ function foothills_customize_preview_js() {
 	wp_enqueue_script( 'foothills_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'foothills_customize_preview_js' );
+
+/**
+ * Remove Additional CSS from Customizer
+ *
+ * @param WP_Customize_Manager $wp_customize
+ */
+function foothills_remove_customizer_additional_css( $wp_customize ) {
+
+	$wp_customize->remove_section( 'custom_css' );
+
+}
+add_action( 'customize_register', 'foothills_remove_customizer_additional_css', 15 );
