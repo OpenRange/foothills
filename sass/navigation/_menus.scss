@@ -48,7 +48,7 @@
 			left: auto;
 		}
 	}
-	
+
 	li {
 		float: left;
 		position: relative;
@@ -57,7 +57,7 @@
 		&.focus > a {
 		}
 	}
-	
+
 	a {
 		display: block;
 		text-decoration: none;
@@ -65,7 +65,7 @@
 
 	.current_page_item > a,
 	.current-menu-item > a,
-	.current_page_ancestor > a,
+	.current-page-ancestor > a,
 	.current-menu-ancestor > a {
 	}
 }
