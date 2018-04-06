@@ -1,5 +1,5 @@
 .sass-cache
 *.log
 node_modules
-style.css.map
+*.css.map
 .idea
