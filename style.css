@@ -20,27 +20,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-    ## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+# Variables and Mixins
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -271,7 +251,6 @@ select,
 textarea {
   color: #404040;
   font-family: sans-serif;
-  font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -299,8 +278,7 @@ address {
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: .9375rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
@@ -310,8 +288,7 @@ pre {
 
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: .9375rem;
 }
 
 abbr, acronym {
@@ -344,7 +321,6 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote, q {
@@ -406,34 +382,13 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
   padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-}
-button:active, button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-  border-color: #aaa #bbb #bbb;
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: .75rem;
+  line-height: 1;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 input[type="text"],
@@ -452,54 +407,18 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: #666;
+  padding: 3px;
+  color: #404040;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-  color: #111;
+
+textarea {
+  width: 100%;
 }
 
 select {
   border: 1px solid #ccc;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"] {
-  padding: 3px;
-}
-
-textarea {
-  padding-left: 3px;
-  width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -510,9 +429,6 @@ textarea {
 --------------------------------------------------------------*/
 a {
   color: royalblue;
-}
-a:visited {
-  color: purple;
 }
 a:hover, a:focus, a:active {
   color: midnightblue;
@@ -613,14 +529,13 @@ a:hover, a:active {
   overflow: hidden;
 }
 .screen-reader-text:focus {
-  background-color: #f1f1f1;
+  background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
-  color: #21759b;
+  color: #404040;
   display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: .875rem;
   font-weight: bold;
   height: auto;
   left: 5px;
@@ -676,17 +591,6 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
-}
-.widget select {
-  max-width: 100%;
-}
-
-/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -719,25 +623,6 @@ a:hover, a:active {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
-}
-
-/*--------------------------------------------------------------
-## Asides
---------------------------------------------------------------*/
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-  display: none;
-}
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-  word-wrap: break-word;
-}
-
-.bypostauthor {
-  display: block;
 }
 
 /*--------------------------------------------------------------
